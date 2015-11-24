@@ -31,11 +31,28 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         let difference = abs(targetValue - currentValue)
-        let points = 100 - difference
-        score += points
+        var points = 100 - difference
+        
+        let title: String
+        if (difference == 0) {
+            title = "Perfect!"
+            points += 100
+        } else if (difference <= 5) {
+            title = "You almost had it!"
+            if (difference == 1) {
+                points += 50
+            }
+        } else if (difference <= 10) {
+            title = "Pretty good!"
+        } else if (difference <= 30) {
+            title = "Not bad."
+        } else {
+            title = "Not even close..."
+        }
         
         let message = "You scored \(points) points!"
-        let alert = UIAlertController(title: "Hello, World",
+        
+        let alert = UIAlertController(title: title,
                                     message: message,
                                     preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default,
@@ -43,6 +60,7 @@ class ViewController: UIViewController {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
         
+        score += points
         startNewRound()
         updateLabels()
     }
