@@ -11,8 +11,10 @@
 		BA69D7FB1C04D47C00431E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69D7FA1C04D47C00431E28 /* ViewController.swift */; };
 		BA69D7FE1C04D47C00431E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA69D7FC1C04D47C00431E28 /* Main.storyboard */; };
 		BA69D8001C04D47C00431E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA69D7FF1C04D47C00431E28 /* Assets.xcassets */; };
-		BA69D8031C04D47C00431E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA69D8011C04D47C00431E28 /* LaunchScreen.storyboard */; };
 		BA69D80B1C04FB6400431E28 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69D80A1C04FB6400431E28 /* AboutViewController.swift */; };
+		BA69D80D1C050CB600431E28 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = BA69D80C1C050CB600431E28 /* BullsEye.html */; };
+		BA6EDC5F1C051782006D040B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6EDC5D1C051782006D040B /* Default-568h@2x.png */; };
+		BA6EDC601C051782006D040B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6EDC5E1C051782006D040B /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +23,11 @@
 		BA69D7FA1C04D47C00431E28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA69D7FD1C04D47C00431E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA69D7FF1C04D47C00431E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA69D8021C04D47C00431E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA69D8041C04D47C00431E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA69D80A1C04FB6400431E28 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		BA69D80C1C050CB600431E28 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
+		BA6EDC5D1C051782006D040B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BA6EDC5E1C051782006D040B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,14 @@
 		BA69D7F71C04D47C00431E28 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				BA6EDC5D1C051782006D040B /* Default-568h@2x.png */,
+				BA6EDC5E1C051782006D040B /* Default@2x.png */,
+				BA69D80C1C050CB600431E28 /* BullsEye.html */,
 				BA69D7F81C04D47C00431E28 /* AppDelegate.swift */,
 				BA69D7FA1C04D47C00431E28 /* ViewController.swift */,
 				BA69D80A1C04FB6400431E28 /* AboutViewController.swift */,
 				BA69D7FC1C04D47C00431E28 /* Main.storyboard */,
 				BA69D7FF1C04D47C00431E28 /* Assets.xcassets */,
-				BA69D8011C04D47C00431E28 /* LaunchScreen.storyboard */,
 				BA69D8041C04D47C00431E28 /* Info.plist */,
 			);
 			path = BullsEye;
@@ -125,7 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA69D8031C04D47C00431E28 /* LaunchScreen.storyboard in Resources */,
+				BA69D80D1C050CB600431E28 /* BullsEye.html in Resources */,
+				BA6EDC5F1C051782006D040B /* Default-568h@2x.png in Resources */,
+				BA6EDC601C051782006D040B /* Default@2x.png in Resources */,
 				BA69D8001C04D47C00431E28 /* Assets.xcassets in Resources */,
 				BA69D7FE1C04D47C00431E28 /* Main.storyboard in Resources */,
 			);
@@ -153,14 +161,6 @@
 				BA69D7FD1C04D47C00431E28 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BA69D8011C04D47C00431E28 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA69D8021C04D47C00431E28 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,6 +288,7 @@
 				BA69D8091C04D47C00431E28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
