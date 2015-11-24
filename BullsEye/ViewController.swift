@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startNewRound()
-        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +48,7 @@ class ViewController: UIViewController {
         } else {
             title = "Not even close..."
         }
+        score += points
         
         let message = "You scored \(points) points!"
         
@@ -56,17 +56,22 @@ class ViewController: UIViewController {
                                     message: message,
                                     preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default,
-                                    handler: nil)
+                                    handler: { action in
+                                                self.startNewRound()
+                                             })
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
         
-        score += points
-        startNewRound()
-        updateLabels()
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
         currentValue = lroundf(slider.value)
+    }
+    
+    @IBAction func startOver() {
+        score = 0
+        round = 0
+        startNewRound()
     }
     
     func startNewRound() {
@@ -74,6 +79,7 @@ class ViewController: UIViewController {
         currentValue = 50
         slider.value = Float(currentValue)
         round++
+        updateLabels()
     }
     
     func updateLabels() {
